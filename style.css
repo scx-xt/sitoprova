@@ -17,7 +17,7 @@
 .hero-section {
     /* Sovrappone un velo scuro trasparente (linear-gradient) sopra l'immagine (sfondo.jpg) per far leggere meglio il testo bianco */
     /* Una patina nera molto più leggera (20%), che fa risaltare maggiormente i colori */
-background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('sfondo.jpg');
+background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('sfondo.jpg');
     
     background-size: 100% auto; /* Mostra l'immagine intera riempiendo la pagina */
     
