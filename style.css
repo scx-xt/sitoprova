@@ -1,0 +1,249 @@
+/* Il simbolo '*' seleziona TUTTI gli elementi presenti nella pagina per azzerare i valori predefiniti del browser */
+* {
+    /* Elimina i margini esterni predefiniti */
+    margin: 0;
+    
+    /* Elimina i margini interni predefiniti */
+    padding: 0;
+    
+    /* Include i margini interni e i bordi nel calcolo della larghezza totale per evitare sfasamenti */
+    box-sizing: border-box;
+    
+    /* Imposta il tipo di carattere per tutto il testo del sito. Se Segoe UI non c'è, prova i successivi */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Gestisce la sezione principale con lo sfondo (collegata a class="hero-section") */
+.hero-section {
+    /* Sovrappone un velo scuro trasparente (linear-gradient) sopra l'immagine (sfondo.jpg) per far leggere meglio il testo bianco */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sfondo.jpg');
+    
+    background-size: 100% auto; /* Mostra l'immagine intera riempiendo la pagina */
+    
+    background-position: top center; /* Allinea l'immagine partendo dall'alto */
+    
+    /* Impedisce all'immagine di ripetersi come una scacchiera se lo schermo è troppo grande */
+    background-repeat: no-repeat;
+    
+    /* Forza l'altezza della sezione a occupare esattamente il 100% della pagina */
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* Forza la larghezza a occupare il 100% dello schermo dello spettatore */
+    width: 100%;
+    
+    /* Imposta il colore di base di tutti i testi interni su bianco */
+    color: white;
+    
+    /* Rende questa sezione un punto di riferimento per posizionare altri elementi (es. la barra in alto) */
+    position: relative;
+    
+    /* Attiva la tecnologia 'Flexbox', uno strumento potente per allineare gli elementi interni */
+    display: flex;
+    
+    /* Grazie a Flexbox, allinea perfettamente al centro verticale tutti i contenuti interni */
+    align-items: center; 
+    
+    /* Aggiunge uno spazio interno vuoto sul lato sinistro pari al 5% della larghezza della pagina per staccare il testo dal bordo */
+    padding-left: 5%;    
+}
+
+/* Gestisce il contenitore invisibile della barra in alto (collegato a class="top-bar") */
+.top-bar {
+    /* Sgancia la barra dal flusso normale e permette di inchiodarla in un punto preciso */
+    position: absolute;
+    
+    /* Incolla la barra a 20 pixel di distanza dal bordo superiore dello schermo */
+    top: 20px;
+    
+    /* Imposta il limite sinistro al 5% della larghezza della pagina per allinearsi perfettamente al testo sotto */
+    left: 5%;
+    
+    /* Imposta il limite destro al 5% della larghezza della pagina */
+    right: 5%;
+    
+    /* Attiva la tecnologia Flexbox per gestire gli elementi interni (il logo e il piccolo bottone Discord) */
+    display: flex;
+    
+    /* Distribuisce lo spazio: spinge il logo tutto a sinistra e il bottone tutto a destra */
+    justify-content: space-between;
+    
+    /* Allinea verticalmente il logo e il bottone sulla stessa linea immaginaria al centro */
+    align-items: center;
+}
+
+/* Gestisce il testo del logo a sinistra nella barra in alto (collegato a class="logo-text") */
+.logo-text {
+    /* Rende il testo in grassetto */
+    font-weight: bold;
+    
+    /* Aumenta leggermente la dimensione del testo del 10% rispetto alla misura standard */
+    font-size: 1.1rem;
+}
+
+/* Gestisce il piccolo bottone Discord in alto a destra (collegato a class="btn-discord") */
+.btn-discord {
+    /* Imposta uno sfondo bianco trasparente al 10% per creare un effetto vetro */
+    background: rgba(255, 255, 255, 0.1);
+    
+    /* Rende il testo del bottone bianco */
+    color: white;
+    
+    /* Elimina la sottolineatura classica che hanno tutti i link web */
+    text-decoration: none;
+    
+    /* Crea lo spazio intorno al testo: 8 pixel sopra/sotto e 16 pixel a destra/sinistra */
+    padding: 8px 16px;
+    
+    /* Arrotonda gli angoli del bottone creando una forma a pillola */
+    border-radius: 20px;
+    
+    /* Sfoca leggermente lo sfondo che si trova DIETRO al bottone, completando l'effetto vetro (Blur) */
+    backdrop-filter: blur(5px);
+    
+    /* Rende fluida l'animazione del cambio colore quando ci passi sopra con il mouse (durerà 0.3 secondi) */
+    transition: 0.3s;
+}
+
+/* Determina cosa succede al bottone Discord quando l'utente ci passa sopra con il puntatore del mouse (:hover) */
+.btn-discord:hover {
+    /* Aumenta l'opacità dello sfondo bianco al 20% per dare un feedback visivo del passaggio del mouse */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Gestisce il blocco invisibile che racchiude i testi centrali (collegato a class="hero-content") */
+.hero-content {
+    /* Impedisce al testo di allargarsi troppo verso destra sugli schermi giganti, bloccandolo a un massimo di 500 pixel */
+    max-width: 500px;
+}
+
+/* Gestisce il piccolo testo superiore "Salpa i mari..." (collegato a class="subtitle") */
+.subtitle {
+    /* Imposta la dimensione del font al valore standard */
+    font-size: 1rem;
+    
+    /* Aggiunge uno spazio vuoto di 10 pixel sotto al testo per staccarlo dal titolone */
+    margin-bottom: 10px;
+    
+    /* Rende il testo leggermente trasparente al 90% per dare una gerarchia visiva */
+    opacity: 0.9;
+}
+
+/* Funzione speciale che inserisce un elemento grafico finto PRIMA del testo del sottotitolo (::before) */
+.subtitle::before {
+    /* Inserisce fisicamente un trattino lungo prima del testo (esattamente come nello screenshot) */
+    content: "— ";
+    
+    /* Imposta il colore del trattino su bianco puro */
+    color: #fff;
+}
+
+/* Gestisce il titolo gigante "Naviga con noi!" (tag h1) */
+h1 {
+    /* Rende il testo enorme (3.5 volte la misura standard) */
+    font-size: 3.5rem;
+    
+    /* Rende il testo estremamente pesante e marcato (Extra Bold) */
+    font-weight: 800;
+    
+    /* Aggiunge uno spazio vuoto di 15 pixel sotto al titolo per non appiccicarlo alla descrizione */
+    margin-bottom: 15px;
+}
+
+/* Gestisce il testo descrittivo sotto al titolo (collegato a class="description") */
+.description {
+    /* Rende il testo leggermente più grande del normale */
+    font-size: 1.1rem;
+    
+    /* Crea uno spazio vuoto di 30 pixel sotto alla descrizione, allontanando il bottone principale */
+    margin-bottom: 30px;
+    
+    /* Rende il testo trasparente all'80% per farlo sembrare secondario rispetto al titolo */
+    opacity: 0.8;
+}
+
+/* Gestisce l'aspetto del grande bottone bianco "Entra in Gilda" (collegato a class="btn-gilda") */
+.btn-gilda {
+    /* Permette al link di comportarsi come un blocco solido ma di rimanere in linea, utile per applicare margini e padding */
+    display: inline-flex;
+    
+    /* Allinea perfettamente al centro il testo del bottone e il cerchietto con la freccia */
+    align-items: center;
+    
+    /* Colora lo sfondo del bottone di bianco puro */
+    background-color: white;
+    
+    /* Rende il testo interno nero */
+    color: black;
+    
+    /* Rimuove la sottolineatura predefinita del link */
+    text-decoration: none;
+    
+    /* Crea lo spazio vuoto intorno al testo: 15 pixel sopra/sotto e 30 pixel a destra/sinistra */
+    padding: 15px 30px;
+    
+    /* Arrotonda completamente gli angoli del bottone */
+    border-radius: 30px;
+    
+    /* Rende il testo interno in grassetto */
+    font-weight: bold;
+    
+    /* Aumenta leggermente la dimensione del testo del bottone */
+    font-size: 1.1rem;
+    
+    /* Gestisce l'animazione: se il bottone si ingrandisce o cambia colore, lo farà in modo fluido in 0.2 secondi */
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Gestisce l'effetto del passaggio del mouse sul grande bottone "Entra in Gilda" (:hover) */
+.btn-gilda:hover {
+    /* Cambia lo sfondo del bottone in un grigio chiarissimo */
+    background-color: #e0e0e0;
+    
+    /* Ingrandisce leggermente l'intero bottone del 5% per dare un effetto dinamico di "pressione" */
+    transform: scale(1.05);
+}
+
+/* Gestisce il cerchietto nero contenente la freccia obliqua (collegato a class="arrow") */
+.arrow {
+    /* Sfondo nero per il cerchio */
+    background-color: black;
+    
+    /* Colore della freccia interna bianco */
+    color: white;
+    
+    /* Arrotonda gli angoli al 50% trasformando il contenitore in un cerchio perfetto */
+    border-radius: 50%;
+    
+    /* Forza la larghezza del cerchio a 24 pixel */
+    width: 24px;
+    
+    /* Forza l'altezza del cerchio a 24 pixel per renderlo simmetrico */
+    height: 24px;
+    
+    /* Attiva Flexbox solo dentro questo cerchietto per governare la freccia */
+    display: flex;
+    
+    /* Centra la freccia verticalmente nel cerchio */
+    align-items: center;
+    
+    /* Centra la freccia orizzontalmente nel cerchio */
+    justify-content: center;
+    
+    /* Sposta il cerchietto verso destra di 15 pixel per distanziarlo dal testo "Entra in Gilda" */
+    margin-left: 15px;
+    
+    /* Rimpicciolisce leggermente la dimensione della freccia per farla stare bene nel cerchio */
+    font-size: 0.8rem;
+}
+
+/* Gestisce la scritta finale del contatore utenti in basso (collegato a class="members") */
+.members {
+    /* Spinge il testo verso il basso di 40 pixel, allontanandolo dal bottone sopra */
+    margin-top: 40px;
+    
+    /* Rende il carattere leggermente più piccolino del normale */
+    font-size: 0.9rem;
+    
+    /* Rende il testo trasparente al 70% per farlo apparire discreto e di sfondo */
+    opacity: 0.7;
+}
