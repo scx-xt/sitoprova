@@ -47,7 +47,6 @@ background-image: url('sfondo.jpg');
     /* Aggiunge uno spazio interno vuoto sul lato sinistro pari al 5% della larghezza della pagina per staccare il testo dal bordo */
     padding-left: 5%;    
 }
-animation: fadeZoomBg 1s ease-out forwards;
 /* Gestisce il contenitore invisibile della barra in alto (collegato a class="top-bar") */
 .top-bar {
     /* Sgancia la barra dal flusso normale e permette di inchiodarla in un punto preciso */
