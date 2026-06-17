@@ -1,0 +1,90 @@
+<!-- Indica al browser che questo è un documento moderno di tipo HTML5 -->
+<!DOCTYPE html>
+ 
+<!-- Apre la pagina HTML e specifica che la lingua principale del testo è l'italiano -->
+<html lang="it">
+ 
+<!-- Apre la sezione 'head', che contiene i dati tecnici nascosti agli utenti ma utili al browser -->
+<head>
+ 
+    <!-- Imposta la codifica dei caratteri su UTF-8 per leggere correttamente lettere accentate (à, è, ì, ecc.) -->
+    <meta charset="UTF-8">
+ 
+    <!-- Rende la pagina responsive, così si adatta da sola alla grandezza dello schermo di smartphone e tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Definisce il titolo della pagina, ovvero il testo che compare in alto sulla scheda del browser -->
+    <title>La Furia di Te Fiti</title>
+ 
+    <!-- Collega questo file HTML al file 'style.css' per applicare i colori, la grafica e le posizioni degli elementi -->
+    <link rel="stylesheet" href="style.css">
+ 
+<!-- Chiude la sezione delle informazioni tecniche -->
+</head>
+ 
+<!-- Apre il corpo della pagina, che contiene tutto ciò che sarà visibile visivamente sullo schermo -->
+<body>
+ 
+    <!-- Questo è un commento HTML: serve solo a te per organizzare il codice e non appare sul sito -->
+    <!-- Sfondo e contenuto principale -->
+ 
+    <!-- Crea la sezione principale superiore della pagina (chiamata 'hero'), usata qui per contenere lo sfondo a schermo intero -->
+    <header class="hero-section">
+ 
+        <!-- Commento che indica l'inizio della barra in alto -->
+        <!-- Barra superiore opzionale (Logo e Bottone Discord) -->
+ 
+        <!-- Crea un contenitore (box) invisibile chiamato 'top-bar' per tenere allineati gli elementi in alto -->
+        <div class="top-bar">
+ 
+            <!-- Inserisce il testo del logo a sinistra. 'span' si usa per piccoli testi sulla stessa riga -->
+            <span class="logo-text">La Furia di Te Fiti</span>
+ 
+            <!-- Crea un collegamento ipertestuale (link) stilizzato come bottone. 'target="_blank"' fa aprire Discord in una nuova scheda senza chiudere il tuo sito -->
+            <a href="https://discord.gg/ExcYQB2W22" class="btn-discord" target="_blank">Discord</a>
+ 
+        <!-- Chiude il contenitore della barra superiore -->
+        </div>
+ 
+        <!-- Commento per la sezione centrale dello schermo -->
+        <!-- Contenuto centrale a sinistra -->
+ 
+        <!-- Crea un contenitore chiamato 'hero-content' per raggruppare i testi e il bottone principale posizionati a sinistra -->
+        <div class="hero-content">
+ 
+            <!-- Inserisce un paragrafo di testo standard ('p') per il piccolo sottotitolo iniziale -->
+            <p class="subtitle">Salpa i mari con la nostra bandiera</p>
+ 
+            <!-- Inserisce il titolo più importante e grande della pagina utilizzando il tag 'h1' (Heading 1) -->
+            <h1>Naviga con noi!</h1>
+ 
+            <!-- Inserisce un secondo paragrafo di testo per la descrizione sotto al titolo principale -->
+            <p class="description">Preparati a compagni ed esperienze indimenticabili</p>
+ 
+            <!-- Commento per il pulsante di invito -->
+            <!-- Bottone principale -->
+ 
+            <!-- Crea il grande link cliccabile per entrare su Discord. Anche questo si aprirà in una nuova scheda -->
+            <a href="https://discord.gg/ExcYQB2W22" class="btn-gilda" target="_blank">
+                <!-- Testo visibile dentro al bottone -->
+                Entra in Gilda 
+                <!-- Inserisce la freccia obliqua dentro un piccolo cerchio che verrà gestito dal CSS -->
+                <span class="arrow">↗</span>
+ 
+            <!-- Chiude il collegamento del bottone principale -->
+            </a>
+ 
+            <!-- Inserisce l'ultimo testo in basso nel blocco per mostrare il numero dei membri -->
+            <p class="members">400+ Membri</p>
+ 
+        <!-- Chiude il contenitore del blocco di testo centrale -->
+        </div>
+ 
+    <!-- Chiude la sezione della testata con lo sfondo -->
+    </header>
+ 
+<!-- Chiude il corpo visibile della pagina -->
+</body>
+ 
+<!-- Chiude definitivamente l'intero documento HTML -->
+</html>
